@@ -1,0 +1,28 @@
+2017-05-31 06:17:50 WARNING (Recorder) [homeassistant.components.recorder] Ended unfinished session (id=4 from 2017-05-31 06:11:45.496047)
+2017-05-31 06:17:52 WARNING (MainThread) [homeassistant.components.updater] Running on 'dev', only analytics will be submitted
+2017-05-31 06:18:02 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2017-05-31 06:18:02 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform yr is taking over 10 seconds.
+2017-05-31 06:18:02 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: 
+2017-05-31 06:23:40 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/app/homeassistant/components/discovery.py", line 119, in scan_devices
+    None, _discover, netdisco)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/app/homeassistant/components/discovery.py", line 145, in _discover
+    netdisco.scan()
+  File "/usr/local/lib/python3.6/site-packages/netdisco/discovery.py", line 60, in scan
+    self.gdm.scan()
+  File "/usr/local/lib/python3.6/site-packages/netdisco/gdm.py", line 21, in scan
+    self.update()
+  File "/usr/local/lib/python3.6/site-packages/netdisco/gdm.py", line 76, in update
+    sock.sendto(gdm_msg, (gdm_ip, gdm_port))
+OSError: [Errno 101] Network is unreachable
+2017-05-31 06:33:02 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno 101] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Can not connect to aa015h6buqvih86i1.api.met.no:443 [Network is unreachable]]
+2017-05-31 06:37:56 ERROR (MainThread) [homeassistant.core] Error doing job: Fatal error on transport TCPTransport (error status in uv_stream_t.read callback)
+TimeoutError: [Errno 110] Connection timed out
+2017-05-31 06:48:03 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno 101] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Can not connect to aa015h6buqvih86i1.api.met.no:443 [Network is unreachable]]
+2017-05-31 07:03:37 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno 101] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Can not connect to aa015h6buqvih86i1.api.met.no:443 [Network is unreachable]]
+2017-05-31 07:17:53 ERROR (MainThread) [homeassistant.components.updater] Could not contact Home Assistant Update to check for updates
+2017-05-31 07:18:38 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno 101] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Can not connect to aa015h6buqvih86i1.api.met.no:443 [Network is unreachable]]
+2017-05-31 07:33:39 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: [Errno 101] Cannot connect to host aa015h6buqvih86i1.api.met.no:443 ssl:True [Can not connect to aa015h6buqvih86i1.api.met.no:443 [Network is unreachable]]
