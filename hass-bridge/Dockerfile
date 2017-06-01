@@ -1,4 +1,4 @@
-FROM resin/raspberry-pi3-python:3.6
+FROM magihome/homeassistant:latest
 MAINTAINER jin.yang <magihome@qq.com>
 
 # Install homebridge
@@ -19,6 +19,7 @@ RUN sed -i 's/AVAHI_DAEMON_DETECT_LOCAL=1/AVAHI_DAEMON_DETECT_LOCAL=0/' /etc/def
 # Copy config.json
 WORKDIR /root
 RUN sudo mkdir .homebridge
+COPY config.json /root/.homebridge/config.json
 
 WORKDIR /usr/src/app
 COPY run.sh /usr/src/app/run.sh
