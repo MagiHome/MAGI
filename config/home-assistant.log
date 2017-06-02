@@ -1,3 +1,9 @@
-2017-06-01 14:40:25 WARNING (MainThread) [homeassistant.components.updater] Running on 'dev', only analytics will be submitted
-2017-06-01 14:41:07 ERROR (<concurrent.futures.thread.ThreadPoolExecutor object at 0x74b8b5d0>_5) [homeassistant.components.light.yeelight] Flash supported currently only in RGB mode.
-2017-06-01 14:46:12 ERROR (<concurrent.futures.thread.ThreadPoolExecutor object at 0x74b8b5d0>_7) [homeassistant.components.light.yeelight] Unable to update bulb status: Bulb closed the connection.
+2017-06-02 01:31:11 WARNING (MainThread) [homeassistant.components.updater] Running on 'dev', only analytics will be submitted
+2017-06-02 01:31:12 ERROR (<concurrent.futures.thread.ThreadPoolExecutor object at 0x74bcb5d0>_3) [homeassistant.components.switch.broadlink] Failed to connect to device
+2017-06-02 01:31:15 WARNING (<concurrent.futures.thread.ThreadPoolExecutor object at 0x74bcb5d0>_7) [homeassistant.components.sensor.broadlink] Failed to connect to device
+2017-06-02 01:31:17 ERROR (<concurrent.futures.thread.ThreadPoolExecutor object at 0x74bcb5d0>_2) [homeassistant.components.light.yeelight] Failed to connect to bulb 192.168.3.3, light: A socket error occurred when sending the command.
+2017-06-02 01:31:21 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2017-06-02 01:31:21 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
+2017-06-02 01:31:21 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform yr is taking over 10 seconds.
+2017-06-02 01:31:21 WARNING (MainThread) [homeassistant.components.sensor.yr] Retrying in 15 minutes: 
+2017-06-02 01:31:21 WARNING (MainThread) [homeassistant.components.light] Setup of platform yeelight is taking over 10 seconds.
