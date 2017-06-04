@@ -23,6 +23,12 @@ COPY requirements_all.txt requirements_all.txt
 RUN pip3 install --no-cache-dir -r requirements_all.txt && \
     pip3 install --no-cache-dir mysqlclient psycopg2 uvloop cchardet
 
+# add vlc media player
+RUN apt-get update && apt-get install vlc
+RUN useradd homeassistant
+RUN sudo usermod -a -G audio,root homeassistant
+USER homeassistant
+
 # Copy source
 COPY . .
 

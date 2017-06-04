@@ -62,7 +62,7 @@ tts:
   platform: google
 
 group: !include groups.yaml
-automation: !include automations.yaml
+#automation: !include automations.yaml
 
 light:
   - platform: yeelight
@@ -95,3 +95,25 @@ switch:
       friendly_name: "BedroomTV"
       command_on: 'JgBmAJSPFBAVNRQ1FDUVEBQRFBEUERQQFTUUNRQ1FRAUERQRFBAVEBUQFDUVNBUQFRAVEBQRFDUVNBUQFRAUNRU1FDUUNRQABemUjxQ1FQAMOJSPFDUVAAw4lI8UNRUADDiTkBM2EwANBQAA'
       command_off: 'JgBmAJSPFBAVNRQ1FDUVEBQRFBEUERQQFTUUNRQ1FRAUERQRFBAVEBUQFDUVNBUQFRAVEBQRFDUVNBUQFRAUNRU1FDUUNRQABemUjxQ1FQAMOJSPFDUVAAw4lI8UNRUADDiTkBM2EwANBQAA'
+    yacoolstore:
+      friendly_name: "GAOYONG stero"
+      command_on: 'JgBYAAABKZMUERQRFRETNhU1FTYTNxQRExIUNhQ2FDYUERQRFBEUERUQFBEUERURExEVEBURExEVNhQ2FDYUNhQ2FDYVNRQ2FQAFRgABKkgVAAxeAAEnSxIADQU=' 
+      command_off: 'JgBYAAABKpIUERUQFBITNhQ2FTYUNhMSFBAVNhQ2EzcUERMSFBEVEBMTExEVEBQSExEVEBQSFBAVNhQ2EzYVNhQ2EzcUNhQ2FAAFRwABKkgVAAxdAAEqSBUADQU='
+
+media_player:
+    - platform: vlc
+      name: speaker
+
+automation:
+  - alias: play music
+    trigger:
+      platform: event
+      event_type: call_service
+      event_data:
+        domain: media_player
+        service: media_play
+    action:
+      service: media_player.play_media
+      data:
+        media_content_id: 'mms://radio.mx8087.cn/tingmx'
+        media_content_type: 'music'
