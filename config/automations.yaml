@@ -1,1 +1,12 @@
-[]
+- alias: play music
+  trigger:
+    platform: event
+    event_type: call_service
+    event_data:
+      domain: media_player
+      service: media_play
+  action:
+    service: media_player.play_media
+    data:
+      media_content_id: 'mms://radio.mx8087.cn/tingmx'
+      media_content_type: 'music'

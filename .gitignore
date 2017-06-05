@@ -1,4 +1,4 @@
 config/home-assistant.log
 config/home-assistant_v2.db
-config/homebridge/persist/AccessoryInfo.CC213DE3CE10.json
-config/homebridge/persist/IdentifierCache.CC213DE3CE10.json
+config/homebridge/persist/*
+config/cache/*

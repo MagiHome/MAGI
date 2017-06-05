@@ -1,0 +1,4 @@
+- platform: yeelight
+  devices:
+    192.168.3.3:
+      name: light
