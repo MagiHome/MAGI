@@ -27,9 +27,10 @@ RUN pip3 install --no-cache-dir -r requirements_all.txt && \
 RUN apt-get update && apt-get install vlc
 RUN useradd homeassistant
 RUN sudo usermod -a -G audio,root homeassistant
-USER homeassistant
 
 # Copy source
 COPY . .
+
+USER homeassistant
 
 CMD [ "python", "-m", "homeassistant", "--config", "/config" ]

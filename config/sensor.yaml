@@ -1,0 +1,6 @@
+- platform: yr
+- platform: darksky
+  api_key: 368ecb090ee4bbe36a78cfc44b1bf100
+  monitored_conditions:
+    - summary
+    - temperature

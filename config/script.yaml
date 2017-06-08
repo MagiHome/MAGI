@@ -1,0 +1,3 @@
+greating:
+  sequence:
+    service: shell_command.weather

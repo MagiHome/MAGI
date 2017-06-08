@@ -8,5 +8,6 @@
   action:
     service: media_player.play_media
     data:
-      media_content_id: 'mms://radio.mx8087.cn/tingmx'
+#     media_content_id: 'mms://radio.mx8087.cn/tingmx'
+      media_content_id: 'file:///config/test1.mp3'
       media_content_type: 'music'

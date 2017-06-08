@@ -1,0 +1,1 @@
+- weather: bash /usr/src/app/tts/playtts.sh "你好，我是麦琪，很高兴跟你聊天！"

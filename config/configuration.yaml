@@ -49,24 +49,21 @@ logbook:
 sun:
 
 # Weather Prediction
-sensor:
-  - platform: yr
+sensor: !include sensor.yaml
 
 # Text to speech
 tts:
-  platform: amazon_polly
-  cache: true
-  cache_dir: /config/cache
-  aws_access_key_id: AKIAJRHBMVUV3KCDWQDA
-  aws_secret_access_key: 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
 
 group: !include groups.yaml
+
 automation: !include automations.yaml
 
-media_player:
-    - platform: vlc
-      name: speaker
+media_player: !include media_player.yaml
 
-#switch: !include switch.yaml
+switch: !include switch.yaml
 
-#light: !include light.yaml
+light: !include light.yaml
+
+shell_command: !include shell_command.yaml
+
+script: !include script.yaml

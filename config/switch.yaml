@@ -26,3 +26,8 @@
       friendly_name: "GAOYONG stero"
       command_on: 'JgBYAAABKZMUERQRFRETNhU1FTYTNxQRExIUNhQ2FDYUERQRFBEUERUQFBEUERURExEVEBURExEVNhQ2FDYUNhQ2FDYVNRQ2FQAFRgABKkgVAAxeAAEnSxIADQU='
       command_off: 'JgBYAAABKpIUERUQFBITNhQ2FTYUNhMSFBAVNhQ2EzcUERMSFBEVEBMTExEVEBQSExEVEBQSFBAVNhQ2EzYVNhQ2EzcUNhQ2FAAFRwABKkgVAAxdAAEqSBUADQU='
+- platform: command_line
+  switches:
+    great:
+      command_on: /usr/src/app/tts/playtts.sh "你好，我是麦琪，很高兴与你聊天！今天成都的天气晴,温度为33度" 
+      command_off: /usr/src/app/tts/playtts.sh "再见"
