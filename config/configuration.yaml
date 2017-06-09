@@ -66,4 +66,4 @@ light: !include light.yaml
 
 shell_command: !include shell_command.yaml
 
-script: !include script.yaml
+#script: !include script.yaml

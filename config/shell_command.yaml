@@ -1,1 +1,26 @@
-- weather: bash /usr/src/app/tts/playtts.sh "你好，我是麦琪，很高兴跟你聊天！"
+weather: > 
+  bash /usr/src/app/tts/playtts.sh  
+  "杨金
+  {% if now().strftime("%H")|int < 12 %}
+  早上好。
+  {% elif now().strftime("%H")|int < 18 %}
+  下午好。
+  {% else %}
+  晚上好。
+  {% endif %}
+  现在成都的天气为{{states('sensor.dark_sky_summary')}},
+  温度为{{states('sensor.dark_sky_temperature')}}度,
+  PM2.5指数为{{states('sensor.waqi_chengdu')}}
+  {% if states.sensor.waqi_chengdu.state|int <= 50 %}
+  优
+  {% elif states.sensor.waqi_chengdu.state|int <= 100 %}
+  良
+  {% elif states.sensor.waqi_chengdu.state|int <= 150 %}
+  轻度污染，儿童、老年人及心脏病、呼吸系统疾病患者应减少长时间、高强度的户外锻炼
+  {% elif states.sensor.waqi_chengdu.state|int <= 200 %}
+  中度污染，儿童、老年人及心脏病、呼吸系统疾病患者避免长时间、高强度的户外锻炼，一般人群适量减少户外运动
+  {% elif states.sensor.waqi_chengdu.state|int <= 300 %}
+  重度污染，儿童、老年人及心脏病、肺病患者应停留在室内，停止户外运动，一般人群减少户外运动
+  {% elif states.sensor.waqi_chengdu.state|int > 300 %}
+  严重污染，儿童、老年人和病人应停留在室内，避免体力消耗，一般人群避免户外活动
+  {% endif %}"

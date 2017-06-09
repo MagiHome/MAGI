@@ -148,6 +148,7 @@ int main(int argc, char* argv[])
 	const char* session_begin_params = "voice_name = xiaoyan, text_encoding = UTF8, sample_rate = 16000, speed = 50, volume = 50, pitch = 50, rdn = 2";
 	const char* filename             = "/config/tts/tts.wav"; //合成的语音文件名称
 	const char* text                 = argv[1]; //合成文本
+        printf("TTS: %s\n", text);
 
 	/* 用户登录 */
 	ret = MSPLogin(NULL, NULL, login_params);//第一个参数是用户名，第二个参数是密码，第三个参数是登录参数，用户名和密码可在http://open.voicecloud.cn注册获取

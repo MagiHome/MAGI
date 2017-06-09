@@ -11,3 +11,12 @@
 #     media_content_id: 'mms://radio.mx8087.cn/tingmx'
       media_content_id: 'file:///config/test1.mp3'
       media_content_type: 'music'
+      entity_id: media_player.music
+
+- alias: weather
+  trigger:
+    platform: state
+    entity_id: switch.weather
+    to: 'on'
+  action:
+    service: shell_command.weather
