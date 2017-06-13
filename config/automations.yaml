@@ -19,4 +19,9 @@
     entity_id: switch.weather
     to: 'on'
   action:
-    service: shell_command.weather
+    - service: shell_command.weather
+    - service: notify.test
+      data:
+        message: "早上好！"
+        title: "hello!"
+    - service: shell_command.story
