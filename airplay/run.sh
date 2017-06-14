@@ -11,4 +11,4 @@ dbus-daemon --system
 sleep 1
 service avahi-daemon start
 sleep 2
-/usr/local/bin/shairport-sync 
+/usr/local/bin/shairport-sync

@@ -24,4 +24,4 @@
       data:
         message: "早上好！"
         title: "hello!"
-    - service: shell_command.story
+#   - service: shell_command.story
