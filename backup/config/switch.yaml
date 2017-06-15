@@ -15,4 +15,7 @@
   switches:
     weather:
       command_on: ''
-      command_off: '' 
+      command_off: cvlc vlc://quit 
+    music:
+      command_on: cvlc 'file:///config/test1.mp3'
+      command_off: cvlc vlc://quit

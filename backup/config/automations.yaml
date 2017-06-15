@@ -1,5 +1,18 @@
+- alias: play music
+  trigger:
+    platform: event
+    event_type: call_service
+    event_data:
+      domain: media_player
+      service: media_play
+  action:
+    service: media_player.play_media
+    data:
+#     media_content_id: 'mms://radio.mx8087.cn/tingmx'
+      media_content_id: 'file:///config/test1.mp3'
+      media_content_type: 'music'
+
 - alias: weather
-  initial_state: true
   trigger:
     platform: state
     entity_id: switch.weather
@@ -34,25 +47,3 @@
           {% elif states.sensor.waqi_chengdu.state|int > 300 %}
           严重污染，儿童、老年人和病人应停留在室内，避免体力消耗，一般人群避免户外活动
           {% endif %}"
-
-- alias: music
-  initial_state: true
-  trigger:
-    platform: event
-    event_type: call_service
-    event_data:
-      domain: media_player
-      service: media_play
-  action:
-    - service: media_player.volume_set
-      data:
-        entity_id: media_player.music
-        volume_level: 0.6
-    - service: media_player.play_media
-      data:
-        entity_id: media_player.music
-        media_content_id: /config/test1.mp3
-        media_content_type: 'music'
-    - service: automation.turn_off
-      data:
-        entity_id: automation.music

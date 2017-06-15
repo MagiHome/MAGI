@@ -1,0 +1,238 @@
+2017-06-15 13:51:03 WARNING (MainThread) [homeassistant.components.updater] Running on 'dev', only analytics will be submitted
+2017-06-15 13:51:05 ERROR (<concurrent.futures.thread.ThreadPoolExecutor object at 0x751f1ef0>_1) [homeassistant.components.switch.broadlink] Failed to connect to device
+2017-06-15 13:51:09 ERROR (<concurrent.futures.thread.ThreadPoolExecutor object at 0x751f1ef0>_6) [homeassistant.components.light.yeelight] Failed to connect to bulb 192.168.3.3, light: A socket error occurred when sending the command.
+2017-06-15 13:51:12 WARNING (MainThread) [homeassistant.setup] Setup of sensor is taking over 10 seconds.
+2017-06-15 13:51:13 WARNING (MainThread) [homeassistant.setup] Setup of light is taking over 10 seconds.
+2017-06-15 13:51:13 WARNING (MainThread) [homeassistant.components.sensor] Setup of platform waqi is taking over 10 seconds.
+2017-06-15 13:51:13 WARNING (MainThread) [homeassistant.components.light] Setup of platform yeelight is taking over 10 seconds.
+2017-06-15 13:51:40 ERROR (MainThread) [homeassistant.core] Error doing job: Task exception was never retrieved
+Traceback (most recent call last):
+  File "/usr/src/app/homeassistant/components/discovery.py", line 119, in scan_devices
+    None, _discover, netdisco)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/app/homeassistant/components/discovery.py", line 145, in _discover
+    netdisco.scan()
+  File "/usr/local/lib/python3.6/site-packages/netdisco/discovery.py", line 57, in scan
+    self.ssdp.scan()
+  File "/usr/local/lib/python3.6/site-packages/netdisco/ssdp.py", line 38, in scan
+    self.update()
+  File "/usr/local/lib/python3.6/site-packages/netdisco/ssdp.py", line 86, in update
+    entry for entry in scan()
+  File "/usr/local/lib/python3.6/site-packages/netdisco/ssdp.py", line 270, in scan
+    return sorted(entries.values(), key=lambda entry: entry.location)
+TypeError: '<' not supported between instances of 'str' and 'NoneType'
+2017-06-15 13:54:27 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.waqi_xiongmao_jidi_chengdu is taking over 10 seconds
+2017-06-15 13:54:35 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:55:06 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:55:37 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:55:43 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.waqi_xiongmao_jidi_chengdu fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connection.py", line 326, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/util/ssl_.py", line 325, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 401, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 808, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1061, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 683, in do_handshake
+    self._sslobj.do_handshake()
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 438, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/util/retry.py", line 357, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connection.py", line 326, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/util/ssl_.py", line 325, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 401, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 808, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1061, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 683, in do_handshake
+    self._sslobj.do_handshake()
+requests.packages.urllib3.exceptions.ProtocolError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/app/homeassistant/helpers/entity.py", line 225, in async_update_ha_state
+    None, self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/app/homeassistant/components/sensor/waqi.py", line 147, in update
+    self.data.update()
+  File "/usr/src/app/homeassistant/util/__init__.py", line 303, in wrapper
+    result = method(*args, **kwargs)
+  File "/usr/src/app/homeassistant/components/sensor/waqi.py", line 166, in update
+    self._station_id, self._token)
+  File "/usr/local/lib/python3.6/site-packages/pwaqi/__init__.py", line 70, in get_station_observation
+    'token': token
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 488, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2017-06-15 13:55:53 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.waqi_shilidian_chengdu is taking over 10 seconds
+2017-06-15 13:56:08 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:56:30 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.waqi_jian_hang_jiashu_lou_chengdu is taking over 10 seconds
+2017-06-15 13:56:39 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:57:10 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:57:14 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.waqi_jian_hang_jiashu_lou_chengdu fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connection.py", line 326, in connect
+    ssl_context=context)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/util/ssl_.py", line 325, in ssl_wrap_socket
+    return context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/local/lib/python3.6/ssl.py", line 401, in wrap_socket
+    _context=self, _session=session)
+  File "/usr/local/lib/python3.6/ssl.py", line 808, in __init__
+    self.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 1061, in do_handshake
+    self._sslobj.do_handshake()
+  File "/usr/local/lib/python3.6/ssl.py", line 683, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLEOFError: EOF occurred in violation of protocol (_ssl.c:749)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 438, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 630, in urlopen
+    raise SSLError(e)
+requests.packages.urllib3.exceptions.SSLError: EOF occurred in violation of protocol (_ssl.c:749)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/app/homeassistant/helpers/entity.py", line 225, in async_update_ha_state
+    None, self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/app/homeassistant/components/sensor/waqi.py", line 147, in update
+    self.data.update()
+  File "/usr/src/app/homeassistant/util/__init__.py", line 303, in wrapper
+    result = method(*args, **kwargs)
+  File "/usr/src/app/homeassistant/components/sensor/waqi.py", line 166, in update
+    self._station_id, self._token)
+  File "/usr/local/lib/python3.6/site-packages/pwaqi/__init__.py", line 70, in get_station_observation
+    'token': token
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 512, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: EOF occurred in violation of protocol (_ssl.c:749)
+2017-06-15 13:57:51 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.waqi_lido_garden_chengdu is taking over 10 seconds
+2017-06-15 13:58:12 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:58:43 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:59:14 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:59:31 WARNING (MainThread) [homeassistant.helpers.entity] Update of sensor.dark_sky_temperature is taking over 10 seconds
+2017-06-15 13:59:45 WARNING (MainThread) [homeassistant.components.sensor] Updating waqi sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:59:52 WARNING (MainThread) [homeassistant.components.sensor] Updating darksky sensor took longer than the scheduled update interval 0:00:30
+2017-06-15 13:59:55 ERROR (MainThread) [homeassistant.helpers.entity] Update for sensor.waqi_lido_garden_chengdu fails
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+TimeoutError: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 345, in _make_request
+    self._validate_conn(conn)
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 844, in _validate_conn
+    conn.connect()
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connection.py", line 284, in connect
+    conn = self._new_conn()
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+requests.packages.urllib3.exceptions.NewConnectionError: <requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x627a7bb0>: Failed to establish a new connection: [Errno 110] Connection timed out
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 438, in send
+    timeout=timeout
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/connectionpool.py", line 649, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/usr/local/lib/python3.6/site-packages/requests/packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+requests.packages.urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.waqi.info', port=443): Max retries exceeded with url: /feed/@8540/?token=4d407311beb68b0bda8fb6d17f80a1ccbb92312b (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x627a7bb0>: Failed to establish a new connection: [Errno 110] Connection timed out',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/src/app/homeassistant/helpers/entity.py", line 225, in async_update_ha_state
+    None, self.update)
+  File "/usr/local/lib/python3.6/concurrent/futures/thread.py", line 55, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/usr/src/app/homeassistant/components/sensor/waqi.py", line 147, in update
+    self.data.update()
+  File "/usr/src/app/homeassistant/util/__init__.py", line 303, in wrapper
+    result = method(*args, **kwargs)
+  File "/usr/src/app/homeassistant/components/sensor/waqi.py", line 166, in update
+    self._station_id, self._token)
+  File "/usr/local/lib/python3.6/site-packages/pwaqi/__init__.py", line 70, in get_station_observation
+    'token': token
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 72, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 518, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/sessions.py", line 639, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/local/lib/python3.6/site-packages/requests/adapters.py", line 502, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.waqi.info', port=443): Max retries exceeded with url: /feed/@8540/?token=4d407311beb68b0bda8fb6d17f80a1ccbb92312b (Caused by NewConnectionError('<requests.packages.urllib3.connection.VerifiedHTTPSConnection object at 0x627a7bb0>: Failed to establish a new connection: [Errno 110] Connection timed out',))

@@ -1,0 +1,10 @@
+- platform: yr
+- platform: darksky
+  api_key: 368ecb090ee4bbe36a78cfc44b1bf100
+  monitored_conditions:
+    - summary
+    - temperature
+- platform: waqi
+  token: 4d407311beb68b0bda8fb6d17f80a1ccbb92312b
+  locations:
+    - chengdu
