@@ -1,0 +1,23 @@
+devicename:
+  name: Jin
+  mac: 68:DB:CA:50:41:CF
+  track: yes
+  hide_if_away: no
+
+iphone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: iphone
+  picture:
+  track: true
+  vendor:
+
+yangjin:
+  hide_if_away: false
+  icon:
+  mac:
+  name: yangjin
+  picture:
+  track: true
+  vendor:

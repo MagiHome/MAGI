@@ -145,7 +145,7 @@ int main(int argc, char* argv[])
 	*
 	* 详细参数说明请参阅《iFlytek MSC Reference Manual》
 	*/
-	const char* session_begin_params = "voice_name = xiaoyan, text_encoding = UTF8, sample_rate = 16000, speed = 50, volume = 50, pitch = 50, rdn = 2";
+	const char* session_begin_params = "voice_name = jinger, text_encoding = UTF8, sample_rate = 16000, speed = 48, volume = 50, pitch = 48, rdn = 0";
 	const char* filename             = "/config/tts/tts.wav"; //合成的语音文件名称
 	const char* text                 = argv[1]; //合成文本
         printf("TTS: %s\n", text);
@@ -157,6 +157,7 @@ int main(int argc, char* argv[])
 		printf("MSPLogin failed, error code: %d.\n", ret);
 		goto exit ;//登录失败，退出登录
 	}
+
 	ret = text_to_speech(text, filename, session_begin_params);
 	if (MSP_SUCCESS != ret)
 	{

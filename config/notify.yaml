@@ -1,4 +1,4 @@
-- name: apple
+- name: instapush 
   platform: instapush
   api_key: 593a5f15a4c48a870f2623a1
   app_secret: ca3cdc093de718b3efbd67216edeae9e

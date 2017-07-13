@@ -1,5 +1,5 @@
-weather: > 
-  bash /usr/src/app/tts/playtts.sh  
+weather: >
+  bash /usr/src/app/tts/playtts.sh 
   "杨金
   {% if now().strftime("%H")|int < 12 %}
   早上好。
@@ -8,8 +8,26 @@ weather: >
   {% else %}
   晚上好。
   {% endif %}
-  现在成都的天气为{{states('sensor.dark_sky_summary')}},
-  温度为{{states('sensor.dark_sky_temperature')}}度,
+  现在成都的天气为,
+  {% if is_state('sensor.dark_sky_summary', 'Clear') %}
+  晴
+  {% elif is_state('sensor.dark_sky_summary', 'Partly Cloudy') %}
+  多云
+  {% elif is_state('sensor.dark_sky_summary', 'Overcast') %}
+  阴
+  {% elif is_state('sensor.dark_sky_summary', 'Light Rain') %}
+  小雨
+  {% elif is_state('sensor.dark_sky_summary', 'Rain') %}
+  雨
+  {% elif is_state('sensor.dark_sky_summary', 'Heavy Rain') %}
+  大雨
+  {% else %}
+  {{states('sensor.dark_sky_summary')}},
+  {% endif %}
+  ,
+  当前温度为{{states('sensor.dark_sky_temperature')}}度,
+  预计今天的最高温度为{{states('sensor.dark_sky_daily_high_temperature')}}度,
+  最低温度为{{states('sensor.dark_sky_daily_low_temperature')}}度,
   PM2.5指数为{{states('sensor.waqi_chengdu')}}
   {% if states.sensor.waqi_chengdu.state|int <= 50 %}
   优

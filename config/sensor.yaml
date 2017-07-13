@@ -4,6 +4,8 @@
   monitored_conditions:
     - summary
     - temperature
+    - temperature_max
+    - temperature_min
 - platform: waqi
   token: 4d407311beb68b0bda8fb6d17f80a1ccbb92312b
   locations:
